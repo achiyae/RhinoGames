@@ -12,14 +12,14 @@ public class Main {
     Context cx = Context.enter();
     try {
       Global global = new Global(cx);
-      String script = getScript();
+      String script = getResourceScript();
       Object result = cx.evaluateString(global, script, "code.js", 1, null);
     } finally {
       Context.exit();
     }
   }
 
-  private static String getScript() {
+  private static String getResourceScript() {
     String script;
     try (InputStream resource = Thread.currentThread().getContextClassLoader().getResourceAsStream("code.js");
        InputStreamReader streamReader = new InputStreamReader(resource, StandardCharsets.UTF_8);
