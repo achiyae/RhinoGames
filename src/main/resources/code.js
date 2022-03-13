@@ -1,5 +1,5 @@
-var a1 = { a: 'a' }
-var a2 = { a: 'a' }
-var a3 = { a: 'a' }
-
-print(a1)
+for (let i = 0; i < 3; i++) {
+  let l = 2;
+  print("asdfds");
+  // print(l);
+}
